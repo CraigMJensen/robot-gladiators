@@ -3,7 +3,8 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-// You can log multiple values at once, example console.log(playerName, playerAttack, playerHealth);
+// You can log multiple values at once, example 
+console.log(playerName, playerAttack, playerHealth);
 
 var enemyName = "Roborto";
 var enemyHealth = 50;
@@ -56,8 +57,10 @@ var fight = function () {
         else {
             fight();
         }
+    } else {
+        window.alert("You need to pick a valid option. Try again!");
     }
-}
+};
 
 
 fight();
