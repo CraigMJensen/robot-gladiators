@@ -1,5 +1,5 @@
 var playerName = window.prompt("What is your robot's name?");
-var playerHealth = 10;
+var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
@@ -7,11 +7,6 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-// Game States
-// "WIN" - Player robot has defeated all enemy robots
-//    * Fight all enemy robots
-//    * Defeat each enemy robot
-// "LOSE" - Player robot's health is zero or less
 
 var fight = function (enemyNames) {
     while (playerHealth > 0 && enemyHealth > 0) {
