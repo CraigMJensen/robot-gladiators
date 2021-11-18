@@ -16,15 +16,13 @@ var fightOrSkip = function () {
 
     promptFight = promptFight.toLowerCase();
 
-    if (promptFight === "skip" || promptFight === "SKIP") {
+    if (promptFight === "skip") {
 
         var confirmSkip = window.confirm("Are you sure you'd like to quit?");
 
         if (confirmSkip) {
             window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
             playerInfo.money = (Math.max(0, playerInfo.money - 10));
-            console.log("playerInfo.money", playerInfo.money);
-
 
             return true;
         }
@@ -112,6 +110,7 @@ var startGame = function () {
             if (playerInfo.health > 0 && i < enemyInfo.length - 1) {
 
                 var storeConfirm = window.confirm("The fight is over, visit the store before the next round?");
+
                 if (storeConfirm) {
                     shop();
                 }
@@ -244,10 +243,5 @@ var enemyInfo = [
         attack: randomNumber(10, 14)
     }
 ];
-
-console.log(enemyInfo);
-console.log(enemyInfo[0]);
-console.log(enemyInfo[0].name);
-console.log(enemyInfo[0]['attack']);
 
 startGame();
